@@ -1,6 +1,6 @@
 Instructions:
 
-1. Clone the repo with submodules `git clone --recursive https://github.com/mthierman/example-juce-gain-plugin-webview.git`
+1. Clone the repo with submodules `git clone --recursive https://github.com/mthierman/example-juce-plugin-webview.git`
 2. Install [Node.js](https://nodejs.org/en)
 3. Run `npm install` to install [Vite](https://vitejs.dev/) and the JUCE frontend framework
 4. Run `npm run dev` to run the Vite [development server](http://localhost:5173/)
