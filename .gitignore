@@ -1,0 +1,4 @@
+.vscode
+build
+CMakeUserPresets.json
+node_modules
