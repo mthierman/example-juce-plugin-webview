@@ -15,6 +15,8 @@ FetchContent_MakeAvailable(webview2)
 
 set(JUCE_WEBVIEW2_PACKAGE_LOCATION "${CMAKE_BINARY_DIR}/_deps")
 
+add_subdirectory(libs/JUCE)
+
 juce_add_plugin(
     ${PROJECT_NAME}
     PRODUCT_NAME
