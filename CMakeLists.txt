@@ -42,11 +42,7 @@ target_sources(
             "src/Processor.cxx"
     )
 
-target_compile_features(
-    ${PROJECT_NAME}
-    PUBLIC c_std_17
-           cxx_std_20
-    )
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
 
 target_compile_definitions(
     ${PROJECT_NAME}
@@ -74,5 +70,5 @@ juce_add_binary_data(
     NAMESPACE
     "BinaryData"
     SOURCES
-    "gui/index.html"
+    "index.html"
     )
