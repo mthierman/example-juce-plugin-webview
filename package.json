@@ -1,17 +1,12 @@
 {
-    "name": "template-juce",
-    "private": true,
+    "name": "example-juce-gain-plugin-webview",
     "version": "0.0.0",
+    "private": true,
     "type": "module",
     "scripts": {
-        "check": "tsc",
-        "lint": "eslint .",
-        "apps.gui.dev": "vite --config projects/apps/gui/vite.config.ts",
-        "apps.gui.build": "vite build --config projects/apps/gui/vite.config.ts",
-        "apps.gui.preview": "vite preview --config projects/apps/gui/vite.config.ts",
-        "plugins.gain.dev": "vite --config projects/plugins/gain/vite.config.ts",
-        "plugins.gain.build": "vite build --config projects/plugins/gain/vite.config.ts",
-        "plugins.gain.preview": "vite preview --config projects/plugins/gain/vite.config.ts",
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
         "cmake": "cmake -S . -B build && cmake --build build"
     },
     "dependencies": {
