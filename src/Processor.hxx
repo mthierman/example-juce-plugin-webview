@@ -1,10 +1,6 @@
 #pragma once
 
-#include "Global.hxx"
-
 #include <juce_audio_processors/juce_audio_processors.h>
-#include <utility>
-#include <map>
 
 struct Processor final : public juce::AudioProcessor
 {
@@ -38,14 +34,6 @@ struct Processor final : public juce::AudioProcessor
 
     auto getStateInformation(juce::MemoryBlock& destData) -> void override;
     auto setStateInformation(const void* data, int sizeInBytes) -> void override;
-
-    std::map<Parameters, std::pair<juce::String, juce::String>> m_parameters{
-        {Parameters::gain, std::make_pair("gain", "Gain")},
-        {Parameters::invertPhase, std::make_pair("invertPhase", "Invert Phase")}};
-    juce::AudioProcessorValueTreeState m_apvts;
-    float m_previousGain{};
-    std::atomic<float>* m_phaseParameter{nullptr};
-    std::atomic<float>* m_gainParameter{nullptr};
 
   private:
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(Processor)
