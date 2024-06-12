@@ -13,9 +13,7 @@ Editor::Editor(Processor& processor) : AudioProcessorEditor{&processor}, m_proce
     m_browser.goToURL(juce::WebBrowserComponent::getResourceProviderRoot());
 #endif
 
-    setResizable(true, true);
-    setResizeLimits(200, 100, 1920, 1080);
-    setSize(200, 100);
+    setSize(400, 300);
 }
 
 Editor::~Editor() {}
