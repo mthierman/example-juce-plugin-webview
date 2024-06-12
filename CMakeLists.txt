@@ -1,17 +1,8 @@
 cmake_minimum_required(VERSION 3.28)
 
-project(example-juce-gain-plugin-webview)
+project(example-juce-gain-plugin-webview VERSION 0.0.0)
 
 include(FetchContent)
-
-FetchContent_Declare(
-    juce
-    GIT_REPOSITORY "https://github.com/juce-framework/JUCE.git"
-    GIT_TAG master
-    GIT_SHALLOW ON
-    )
-
-FetchContent_MakeAvailable(juce)
 
 FetchContent_Declare(
     webview2
@@ -20,7 +11,7 @@ FetchContent_Declare(
         "${CMAKE_BINARY_DIR}/_deps/Microsoft.Web.WebView2"
     )
 
-FetchContent_MakeAvailable(nuget)
+FetchContent_MakeAvailable(webview2)
 
 set(JUCE_WEBVIEW2_PACKAGE_LOCATION "${CMAKE_BINARY_DIR}/_deps")
 
@@ -81,8 +72,5 @@ juce_add_binary_data(
     NAMESPACE
     "BinaryData"
     SOURCES
-    "${CMAKE_BINARY_DIR}/plugins/gain/index.html"
-    "${CMAKE_BINARY_DIR}/plugins/gain/index.css"
-    "${CMAKE_BINARY_DIR}/plugins/gain/index.js"
-    "${CMAKE_BINARY_DIR}/plugins/gain/favicon.ico"
+    "gui/index.html"
     )
