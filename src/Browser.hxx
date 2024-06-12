@@ -67,9 +67,5 @@ struct Browser : juce::WebBrowserComponent
     // clang-format on
 
     static inline std::unordered_map<juce::String, juce::WebBrowserComponent::Resource> s_resources{
-        {"/index.html", createResource("index_html")},
-        {"/index.js", createResource("index_js")},
-        {"/index.css", createResource("index_css")},
-        {"/favicon.ico", createResource("favicon_ico")},
-    };
+        {"/index.html", createResource("index_html")}};
 };
