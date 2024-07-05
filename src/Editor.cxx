@@ -7,11 +7,7 @@ Editor::Editor(Processor& processor) : AudioProcessorEditor{&processor}, m_proce
 
     addAndMakeVisible(m_browser);
 
-#if defined(HOT_RELOAD)
-    m_browser.goToURL("http://localhost:5173/");
-#else
     m_browser.goToURL(juce::WebBrowserComponent::getResourceProviderRoot());
-#endif
 
     setSize(400, 300);
 }

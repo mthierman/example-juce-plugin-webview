@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.28)
+cmake_minimum_required(VERSION 3.27)
 
-project(example-juce-gain-plugin-webview VERSION 0.0.0)
+project(WebViewTemplate VERSION 0.0.0)
 
 include(FetchContent)
 
@@ -50,7 +50,6 @@ target_compile_definitions(
            JUCE_USE_WIN_WEBVIEW2_WITH_STATIC_LINKING=1
            JUCE_USE_CURL=0
            JUCE_VST3_CAN_REPLACE_VST2=0
-           $<$<CONFIG:Debug>:HOT_RELOAD=1>
     )
 
 target_link_libraries(
