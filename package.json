@@ -10,9 +10,9 @@
         "cmake": "cmake -S . -B build && cmake --build build"
     },
     "dependencies": {
-        "juce-framework-frontend": "file:libs/juce/modules/juce_gui_extra/native/javascript"
+        "juce-framework-frontend": "file:libs\\juce\\modules\\juce_gui_extra\\native\\javascript"
     },
     "devDependencies": {
-        "vite": "^5.2.13"
+        "vite": "^5.4.3"
     }
 }
