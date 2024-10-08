@@ -6,9 +6,10 @@ include(FetchContent)
 
 FetchContent_Declare(
     webview2
-    URL https://www.nuget.org/api/v2/package/Microsoft.Web.WebView2
-        SOURCE_DIR
-        "${CMAKE_BINARY_DIR}/_deps/Microsoft.Web.WebView2"
+    URL "https://www.nuget.org/api/v2/package/Microsoft.Web.WebView2"
+    DOWNLOAD_NO_PROGRESS TRUE
+    SOURCE_SUBDIR
+    "NULL"
     )
 
 FetchContent_MakeAvailable(webview2)
