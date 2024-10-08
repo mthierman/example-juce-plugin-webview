@@ -10,6 +10,8 @@ FetchContent_Declare(
     DOWNLOAD_NO_PROGRESS TRUE
     SOURCE_SUBDIR
     "NULL"
+    SOURCE_DIR
+    "${CMAKE_BINARY_DIR}/_deps/Microsoft.Web.WebView2"
     )
 
 FetchContent_MakeAvailable(webview2)
